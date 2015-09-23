@@ -185,7 +185,6 @@ if( ! function_exists( 'ct_author_excerpt' ) ) {
 
         // make post variable available
         global $post;
-
         // check for the more tag
         $ismore = strpos( $post->post_content, '<!--more-->' );
 
@@ -224,11 +223,10 @@ add_filter('the_excerpt', 'ct_author_excerpt_read_more_link');
 
 // change the length of the excerpts
 function ct_author_custom_excerpt_length( $length ) {
-
-    $new_excerpt_length = get_theme_mod('excerpt_length');
-
-    // if there is a new length set and it's not 15, change it
-    if( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ){
+    $new_excerpt_length = get_theme_mod('excerpt_length');    
+ 
+    //if there is a new length set and it's not 15, change it
+    if( ! empty( $new_excerpt_length ) && $new_excerpt_length != 25 ){		
         return $new_excerpt_length;
     }
     // allow 0 to be an option if user wants to remove the excerpt entirely
@@ -252,7 +250,7 @@ if( !function_exists('ct_author_new_excerpt_more' ) ) {
 		if( $new_excerpt_length === 0 ) {
 			return '';
 		} else {
-			return '&#8230;';
+			return  '&#8230;';
 		}
 	}
 }

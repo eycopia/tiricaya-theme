@@ -39,6 +39,12 @@ h3, .site-title, .archive-header h2,
   /* 24px */
 }
 
+article h3{
+    font-size: 2em;
+    margin: 1em 0 0 0 !important;
+    color: #2C71CA;
+}
+
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]),
 textarea, input[type="submit"], .tagline, .post-tags a, .widget_tag_cloud a, .further-reading span, .bypostauthor .author-name:after, .comment-footer a,
 .comment-footer span, .widget > *, .site-footer .design-credit {
@@ -68,6 +74,10 @@ textarea, input[type="submit"], .tagline, .post-tags a, .widget_tag_cloud a, .fu
   color: white;
 }
 
+.sidebar-primary, .menu-unset ul{
+    text-align: center;
+}
+
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
   box-sizing: border-box;
@@ -84,7 +94,7 @@ body {
   padding: 0;
   font-family: "Lato", sans-serif;
   line-height: 1.5;
-  background: #27292b;
+  background: #2166AB;
   color: #27292b;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
@@ -207,6 +217,11 @@ th {
   border: solid 1px black;
 }
 
+
+article .post-meta, .post-meta a{
+  color: #A0A0A0;
+}
+
 /* Images */
 .alignleft {
   float: left;
@@ -257,11 +272,12 @@ textarea {
   max-width: 27.75em;
   background: #f0f1f2;
   color: #27292b;
-  outline: solid 1px #d9d9d9;
+  /*outline: solid 1px #d9d9d9;*/
   border: none;
   border-radius: 0;
   font-family: "Lato", sans-serif;
   -webkit-appearance: none;
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.15);
 }
 input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]):focus,
 textarea:focus {
@@ -275,10 +291,9 @@ textarea {
 }
 
 input[type="submit"] {
-  padding: 0.8em;
-  width: 100%;
+  padding: 0.8em 1em;  
   color: white;
-  background: #27292b;
+  background: #2387EA !important;
   outline: none;
   border: none;
   border-radius: 0;
@@ -287,6 +302,7 @@ input[type="submit"] {
   -webkit-appearance: none;
   -webkit-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
+  border-radius: 2px;
 }
 
 input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
@@ -316,6 +332,11 @@ input[type="search"] {
 
 :-ms-input-placeholder {
   color: #5c6066;
+}
+
+
+.read-more{
+  color: #C71515;
 }
 
 /* ie image border fix */
@@ -386,7 +407,7 @@ a img {
 .main-sidebar {
   position: relative;
   padding: 1.5em 7.4074%;
-  background: #27292b;
+  background: #2166AB;
   color: white;
 }
 
@@ -476,7 +497,7 @@ a img {
   list-style: none;
   margin: 1.5em 0 0;
   padding-top: 1.5em;
-  border-top: solid 1px #3e4145;
+  border-top: solid 1px #2C5996;
 }
 .social-media-icons li {
   display: inline-block;
@@ -581,9 +602,10 @@ a img {
 
   .site-avatar {
     float: none;
-    height: 96px;
-    width: 96px;
+    height: 150px;
+    width: 150px;
     margin: 0 auto 0.75em;
+    box-shadow: -3px 2px 0px rgba(59, 164, 255, 0.33);
   }
 
   .title-container {
@@ -639,7 +661,7 @@ a img {
   list-style: none;
   margin: 1.5em 0;
   padding: 1.5em 0 0;
-  border-top: solid 1px #3e4145;
+  border-top: solid 1px #2C5996;
   /* Tier 2 */
 }
 .menu-primary-items ul,
@@ -834,7 +856,7 @@ a img {
 }
 .entry {
   position: relative;
-  margin-bottom: 1.5em;
+  margin-bottom: 4.5em;
 }
 .entry article {
   padding: 1.5em 7.4074%;
@@ -844,9 +866,13 @@ a img {
 .featured-image {
   position: relative;
   height: 0;
-  padding-bottom: 50%;
-  background-size: cover;
-  background-position: 50%;
+  padding-bottom: 30%;
+  background-color: #F0F1F2;
+  border-bottom: 5px solid #2C5996;
+  background-size: 78%;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 .featured-image > a {
   position: absolute;
@@ -873,6 +899,7 @@ a img {
 
 .post-content {
   margin: 1.5em 0;
+  font-size: 1.05em;
 }
 .post-content iframe {
   max-width: 100%;
@@ -929,8 +956,9 @@ a img {
 
 .further-reading {
   text-align: center;
-  background: #d9d9d9;
+  background: #2166AB;
   padding: 0.75em 7.4074%;
+  color: white;
 }
 .further-reading div {
   margin: 1.5em 0;
@@ -938,12 +966,13 @@ a img {
 .further-reading span,
 .further-reading a {
   display: block;
+  color: white;
 }
 
 .blog .entry,
 .archive .entry,
 .search .entry {
-  text-align: center;
+  text-align: left;
 }
 .blog .post-content,
 .archive .post-content,
@@ -1320,8 +1349,8 @@ a img {
 
 .sidebar-primary .widget {
   color: #cccccc;
-  border-top: solid 1px #3e4145;
-  padding: 1.5em 1px;
+  border-top: solid 1px #2C5996;
+  padding: 1em 1px;
 }
 .sidebar-primary .widget-title {
   color: white;

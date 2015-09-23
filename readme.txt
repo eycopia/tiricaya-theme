@@ -1,4 +1,5 @@
-Thanks for downloading Author!
+Updated theme by: Jorge Copia.
+Check website: www.tiricaya.com
 
 -------------------------------------------------------
     Support
