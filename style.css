@@ -1478,12 +1478,16 @@ a img {
 }
 
 .site-footer {
-  position: relative;
-  clear: both;
+  /*position: relative;
+  clear: both;*/
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .site-footer .design-credit {
   padding: 0.75em 7.4074%;
-  background: #d9d9d9;
+  /*background: #d9d9d9;*/
   color: #3e4145;
   text-align: center;
 }
@@ -1493,7 +1497,7 @@ a img {
 .site-footer .design-credit a:link, .site-footer .design-credit a:visited, .site-footer .design-credit a:hover, .site-footer .design-credit a:active, .site-footer .design-credit a:focus {
   color: #3e4145;
 }
-
+/*
 @media all and (min-width: 59.375em) {
   .site-footer {
     float: right;
@@ -1518,7 +1522,7 @@ a img {
     left: 100%;
     background: #d9d9d9;
   }
-}
+}*/
 .error404 .entry article {
   padding-bottom: 3em;
 }
