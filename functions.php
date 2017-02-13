@@ -55,8 +55,8 @@ function ct_author_register_widget_areas(){
         'description'  => __( 'Widgets in this area will be shown in the sidebar', 'author' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>'
+        'before_title'  => '<h4 class="widget-title">',
+        'after_title'   => '</h4>'
     ) );
 }
 add_action('widgets_init','ct_author_register_widget_areas');
@@ -358,7 +358,8 @@ if( !function_exists( 'ct_author_social_array' ) ) {
 			'vk'            => 'author_vk_profile',
 			'weibo'         => 'author_weibo_profile',
 			'tencent-weibo' => 'author_tencent_weibo_profile',
-			'email'         => 'author_email_profile'
+			'email'         => 'author_email_profile',
+            'medium'        => 'author_medium_profile',
 		);
 
 		return apply_filters( 'ct_author_social_array_filter', $social_sites );
@@ -413,7 +414,7 @@ if( ! function_exists('ct_author_social_icons_output') ) {
                             <i class="fa fa-envelope" title="<?php _e('email icon', 'author'); ?>"></i>
                         </a>
                     </li>
-                <?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
+                <?php } elseif ( $active_site == "flickr" || $active_site == "dribbble" || $active_site == "instagram" || $active_site == "medium" || $active_site == "soundcloud" || $active_site == "spotify" || $active_site == "vine" || $active_site == "yahoo" || $active_site == "codepen" || $active_site == "delicious" || $active_site == "stumbleupon" || $active_site == "deviantart" || $active_site == "digg" || $active_site == "hacker-news" || $active_site == "vk" || $active_site == 'weibo' || $active_site == 'tencent-weibo' ) { ?>
                     <li>
                         <a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( ct_author_get_social_url( $source, $key ) ); ?>">
                             <i class="fa fa-<?php echo esc_attr( $active_site ); ?>" title="<?php printf( __('%s icon', 'author'), $active_site ); ?>"></i>

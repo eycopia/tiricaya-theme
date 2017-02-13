@@ -119,6 +119,7 @@ body {
 }
 
 .main {
+  border-left:5px solid lightgrey;
   position: relative;
   margin: 0 auto;
   background: #f0f1f2;
@@ -409,6 +410,7 @@ a img {
   padding: 1.5em 7.4074%;
   background: #2166AB;
   color: white;
+
 }
 
 .sidebar-primary {
@@ -432,7 +434,7 @@ a img {
   .main-sidebar {
     float: left;
     width: 27.775%;
-    padding: 3em 1.85185%;
+    padding: 1em 1.85185%;
     min-height: 100%;
   }
 
@@ -450,7 +452,7 @@ a img {
 }
 @media all and (min-width: 87.5em) {
   .main-sidebar {
-    padding: 3em 26px;
+    padding: 1em 26px;
     max-width: 311px;
   }
 }
@@ -509,7 +511,7 @@ a img {
   line-height: 1;
 }
 .social-media-icons a:link, .social-media-icons a:visited, .social-media-icons a:hover, .social-media-icons a:active, .social-media-icons a:focus {
-  color: #cccccc;
+  color: #f7fa03;
 }
 
 .toggle-navigation {
@@ -660,7 +662,6 @@ a img {
 .menu-unset > ul {
   list-style: none;
   margin: 1.5em 0;
-  padding: 1.5em 0 0;
   border-top: solid 1px #2C5996;
   /* Tier 2 */
 }
@@ -704,6 +705,7 @@ a img {
 .menu-primary-items .menu-item-has-children ul a:link, .menu-primary-items .menu-item-has-children ul a:visited, .menu-primary-items .menu-item-has-children ul a:hover, .menu-primary-items .menu-item-has-children ul a:active, .menu-primary-items .menu-item-has-children ul a:focus,
 .menu-primary-items .page_item_has_children ul a:link,
 .menu-primary-items .page_item_has_children ul a:visited,
+.menu-primary-items .page_item_has_children ul a:hover,
 .menu-primary-items .page_item_has_children ul a:hover,
 .menu-primary-items .page_item_has_children ul a:active,
 .menu-primary-items .page_item_has_children ul a:focus,
@@ -1353,7 +1355,8 @@ a img {
   padding: 1em 1px;
 }
 .sidebar-primary .widget-title {
-  color: white;
+  /*color: white;*/
+  color: #f7fa03;
 }
 .sidebar-primary .widget_recent_entries span {
   color: #999999;
@@ -1649,3 +1652,20 @@ If you want to make CSS edits to your site, use the "Custom CSS" section in the 
 If you want more information about customizing Author with CSS, check out this guide: https://www.competethemes.com/help/custom-css-author/
 
 */
+
+#menu-primary{
+  background: #195fa5;
+}
+
+#menu-primary ul li {
+  border-radius: 2px;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#menu-primary h4{
+  font-size: 1.2em;
+  text-align: center;
+  color: #f7fa03;
+}
