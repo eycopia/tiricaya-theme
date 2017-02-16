@@ -1669,3 +1669,35 @@ If you want more information about customizing Author with CSS, check out this g
   text-align: center;
   color: #f7fa03;
 }
+
+/* Style projects */
+#main-projects{
+  width: 120%;
+}
+
+
+.box-project{
+  background: #fefefe;
+  text-align: center;
+  max-width: 45%;
+  display:inline-block;
+  vertical-align: top;
+  padding:1em;
+  margin:5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.box-project h3{
+  border-bottom: 1px solid #ececec;
+  font-family: verdana;
+}
+
+
+.box-project figcaption{
+  color: gray;
+  font-size: 0.8em
+}
+
+.box-project .project-description{
+  text-align: left;
+}
